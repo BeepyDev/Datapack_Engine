@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:--METHOD",
+    "ingredient": {
+        "item": "--INGREDIENT"
+    },
+    "result": "--ITEM/ID": "--RESULTID",
+    "experience": --XP,
+    "cookingtime": --TIME
+}
