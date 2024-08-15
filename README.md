@@ -7,4 +7,4 @@ DatapackEngine is a command line tool (Will have a GUI in the future) coded in P
 ### Work in progress!
 This project is still being developed, and muc more is come. Star and Watch the repository to know when it is updated (almost daily!)
 # Installation
-You can easily install the EXE file for windows and use the program in one simple file, or you can download all the files to use in your Python environment.
+You can easily install the EXE file for windows and use the program in one simple file, or you can download all the files to use in your Python environment or IDE/VENV.
