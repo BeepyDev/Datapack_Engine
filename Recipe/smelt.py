@@ -5,7 +5,11 @@ from Common.makefile import mkfile
 def makerecipe(name, ns, pkformat):
     print('Is this recipe for a furnace, smoker, blast furnace, or campfire?')
     furnacetype, method = None, None
-    while furnacetype not in ['furnace', 'smoker', 'blast furnace', 'campfire']:
+    while furnacetype not in [
+        'furnace',
+        'smoker',
+        'blast furnace',
+            'campfire']:
         furnacetype = input('> ').lower()
         if furnacetype in 'furnace':
             method = 'smelting'
@@ -32,17 +36,25 @@ def makerecipe(name, ns, pkformat):
     filename = input('> ').replace('.json', '').replace(' ', '_')
     filename = filename if filename != '' else f'r{randint(0, 999_999)}'
 
-    mkfile(f'Projects/{name}/data/{ns}/{"recipes" if pkformat < 48 else "recipe"}/{filename}.json')
+    mkfile(
+        f'Projects/{name}/data/{ns}/{"recipes" if pkformat < 48 else "recipe"}/{filename}.json')
 
     with open('Engine/Placeholders/crafting.furnace', 'r') as placeholder:
-        finaljson = placeholder.read().replace('--METHOD', method
-                                               ).replace('--INGREDIENT', ingredient
-                                                         ).replace('--RESULTID', result
-                                                                   ).replace('--XP', xp
-                                                                             ).replace('--TIME', ticks)
-        finaljson = finaljson.replace('--ITEM/ID', ('item' if pkformat < 48 else 'id'))
+        finaljson = placeholder.read().replace(
+            '--METHOD',
+            method).replace(
+            '--INGREDIENT',
+            ingredient).replace(
+            '--RESULTID',
+            result).replace(
+                '--XP',
+                xp).replace(
+                    '--TIME',
+            ticks)
+        finaljson = finaljson.replace(
+            '--ITEM/ID', ('item' if pkformat < 48 else 'id'))
 
     with open(f'Projects/{name}/data/{ns}/{"recipes" if pkformat < 48 else "recipe"}/{filename}.json',
               'w') as recipe:
         recipe.write(finaljson)
-    print(f'{method.capitalize()} recipe created!')
+    print(f'{method.capitalize()} recipe created with name {filename}!')

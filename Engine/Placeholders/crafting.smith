@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:smithing_trim",
+    "template": {
+        "item": "--TEMPLATE"
+    },
+    "base": {
+        "item": "--BASE"
+    },
+    "addition": {
+        "item": "--ADD"
+    },
+    "result": {
+        "id": "--RESULTID"
+    }
+}

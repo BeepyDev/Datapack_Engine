@@ -21,10 +21,16 @@ def makerecipe(name, ns, pkformat):
     is48up = '48up' if pkformat >= 48 else 'pre48'
 
     with open(f'Engine/Placeholders/crafting.cut.{is48up}', 'r') as placeholder:
-        finaljson = placeholder.read().replace('--INGREDIENT', ingredient).replace('--RESULTID', result).replace(
-            '--AMOUNT', amount)
+        finaljson = placeholder.read().replace(
+            '--INGREDIENT',
+            ingredient).replace(
+            '--RESULTID',
+            result).replace(
+            '--AMOUNT',
+            amount)
 
-    mkfile(f'Projects/{name}/data/{ns}/{"recipes" if pkformat < 48 else "recipe"}/{filename}.json')
+    mkfile(
+        f'Projects/{name}/data/{ns}/{"recipes" if pkformat < 48 else "recipe"}/{filename}.json')
     with open(f'Projects/{name}/data/{ns}/{"recipes" if pkformat < 48 else "recipe"}/{filename}.json',
               'w') as recipe:
         recipe.write(finaljson)
