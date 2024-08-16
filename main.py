@@ -4,44 +4,7 @@ from os import mkdir
 
 import Recipe.smelt
 import Recipe.stonecut
-
-formats = {
-    '1.13': 4,
-    '1.13.1': 4,
-    '1.13.2': 4,
-    '1.14': 4,
-    '1.14.1': 4,
-    '1.14.2': 4,
-    '1.14.3': 4,
-    '1.14.4': 4,
-    '1.15': 5,
-    '1.15.1': 5,
-    '1.15.2': 5,
-    '1.16': 5,
-    '1.16.1': 5,
-    '1.16.2': 6,
-    '1.16.3': 6,
-    '1.16.4': 6,
-    '1.16.5': 6,
-    '1.17': 7,
-    '1.17.1': 7,
-    '1.18': 8,
-    '1.18.1': 8,
-    '1.18.2': 9,
-    '1.19': 10,
-    '1.19.1': 10,
-    '1.19.2': 10,
-    '1.19.3': 10,
-    '1.19.4': 12,
-    '1.20': 15,
-    '1.20.1': 15,
-    '1.20.2': 18,
-    '1.20.3': 26,
-    '1.20.4': 26,
-    '1.20.5': 41,
-    '1.20.6': 41,
-    '1.21': 48
-}
+from Common.formatslist import formats
 
 
 def main():
@@ -53,18 +16,15 @@ def main():
         print('Enter pack namespace (e.g. my_pack)')
         ns = input('> ')
 
-        if not os.path.exists('Projects'):
-            mkdir('Projects')
-        if not os.path.exists(f'Projects/{name}'):
-            mkdir(f'Projects/{name}')
-        if not os.path.exists(f'Projects/{name}/data'):
-            mkdir(f'Projects/{name}/data')
-        if not os.path.exists(f'Projects/{name}/.datapackengine'):
-            mkdir(f'Projects/{name}/.datapackengine')
-        # if not os.path.exists(f'Projects/{name}/.datapackengine/engine.meta'):
-        #     mkdir(f'Projects/{name}/.datapackengine/engine.meta')
-        if not os.path.exists(f'Projects/{name}/data/{ns}'):
-            mkdir(f'Projects/{name}/data/{ns}')
+        project_path = os.path.join('Projects', name)
+        data_path = os.path.join(project_path, 'data')
+        engine_path = os.path.join(project_path, '.datapackengine')
+        namespace_path = os.path.join(data_path, ns)
+
+        paths = [project_path, data_path, engine_path, namespace_path]
+        for path in paths:
+            if not os.path.exists(path):
+                os.mkdir(path)
         print('Successfully created project folder')
 
         print('What version is this pack for? (Snapshots not supported; old versions may not have full support)')
@@ -127,7 +87,6 @@ def main():
                     name = lines[0].strip().replace(';', '')
                     ns = lines[1].strip().replace(';', '')
                     pkformat = int(lines[2].strip().replace(';', ''))
-                    # desc = lines[3].strip().replace(';', '')
             print(f'OK, editing {name}')
             print('What content do you want to add? (recipe, loot table, ...)')
             action = input('> ').lower()
@@ -156,6 +115,16 @@ def main():
                     #             Stonecutter recipe              #
                     ###############################################
                     Recipe.stonecut.makerecipe(name, ns, pkformat)
+                    main()
+
+                elif crafttype in ['smithing', 'smith', 'smithing table']:
+                    ###############################################
+                    #             Stonecutter recipe              #
+                    ###############################################
+                    Recipe.smith.makerecipe(name, ns, pkformat)
+
+                else:
+                    print('Not a valid craft type')
                     main()
 
         else:

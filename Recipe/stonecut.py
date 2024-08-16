@@ -1,5 +1,4 @@
 from random import randint
-
 from Common.makefile import mkfile
 
 

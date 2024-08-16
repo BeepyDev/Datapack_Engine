@@ -4,31 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6d0f1d1-f034-4233-8f35-3cbd775498d8" name="Changes" comment="...">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Datapack Engine.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsonSchemas.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/makefile.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Engine/Placeholders/crafting.cut.48up" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Engine/Placeholders/crafting.cut.pre48" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Engine/Placeholders/crafting.smelt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Recipe/smelt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Recipe/stonecut.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    <list default="true" id="c6d0f1d1-f034-4233-8f35-3cbd775498d8" name="Changes" comment="Update project">
+      <change afterPath="$PROJECT_DIR$/Common/formatslist.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recipe/smith.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recipe/stonecut.py" beforeDir="false" afterPath="$PROJECT_DIR$/Recipe/stonecut.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;BeepyDev&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/BeepyDev/Datapack_Engine.git&quot;,
+    &quot;accountId&quot;: &quot;0ae9f6ae-ab8b-44c5-8dac-a1cd72419904&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/main.py" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -53,10 +62,13 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Austin/PycharmProjects/datapackIDE/Engine/Placeholders",
-    "settings.editor.selected.configurable": "inlay.hints"
+    "last_opened_file_path": "C:/Users/Austin/PycharmProjects/datapackIDE/Recipe",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.postfix.templates"
   },
   "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory"
+    ],
     "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
       "Python"
     ]
@@ -64,6 +76,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Austin\PycharmProjects\datapackIDE\Recipe" />
       <recent name="C:\Users\Austin\PycharmProjects\datapackIDE\Engine\Placeholders" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -145,11 +158,21 @@
       <option name="presentableId" value="Default" />
       <updated>1722955441490</updated>
     </task>
+    <task id="LOCAL-00001" summary="Update project">
+      <option name="closed" value="true" />
+      <created>1723679556857</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1723679556857</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="..." />
-    <option name="LAST_COMMIT_MESSAGE" value="..." />
+    <MESSAGE value="Update project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update project" />
   </component>
 </project>
